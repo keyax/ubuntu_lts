@@ -9,7 +9,7 @@ Supported tags and respective Dockerfile links:
 
 The information about the virtual/transfer sizes and individual layers of the image is provided by Imagebadger as follows:
 
-[![](https://images.microbadger.com/badges/image/keyax/ubuntu_core.svg)](https://microbadger.com/images/keyax/ubuntu_core "Get your own image badge on microbadger.com")   [![](https://images.microbadger.com/badges/version/keyax/ubuntu_core.svg)](https://microbadger.com/images/keyax/ubuntu_core "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/keyax/ubuntu_lts.svg)](https://microbadger.com/images/keyax/ubuntu_lts "Get your own image badge on microbadger.com")   [![](https://images.microbadger.com/badges/version/keyax/ubuntu_lts.svg)](https://microbadger.com/images/keyax/ubuntu_lts "Get your own version badge on microbadger.com")
 
 For more information about this image and its history, please see the relevant manifest file (library/ubuntu).
 
