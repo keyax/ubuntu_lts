@@ -5,7 +5,7 @@ Keyax built of linux Ubuntu Core container compatibility Couchbase 4.5.0
 This Linux base image is built from scratch on Canonical binaries based on Ubuntu Core release 14.04 LTS code named trusty for compatibility with Couchbase release 4.5.0 and is specially configured to run on Docker containers and it provides the basic tools to build other dependent images like Nodejs and Mongodb to construct scalable Swarm clusters.
 
 Supported tags and respective Dockerfile links:
-16.10, yakkety, keyax, swarm
+14.04, trusty, keyax, swarm
 
 The information about the virtual/transfer sizes and individual layers of the image is provided by Imagebadger as follows:
 
