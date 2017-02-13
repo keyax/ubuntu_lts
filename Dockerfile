@@ -47,7 +47,7 @@ RUN sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
 RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
-    software-properties-common \
+#    software-properties-common \
 		ca-certificates \
 		curl \
 		dirmngr \
@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
     python \
 		wget \
 		xz-utils \
-		&& apt-get clean \
+		&& apt-get autoremove && apt-get clean \
   	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
