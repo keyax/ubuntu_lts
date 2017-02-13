@@ -1,9 +1,9 @@
 FROM scratch
 
-LABEL maintainer "yones.lebady AT gmail.com"
-LABEL net.keyax.os "ubuntu core"
-LABEL net.keyax.os.ver "14.04 trusty"
-LABEL net.keyax.vendor "Keyax"
+LABEL maintainer="yones.lebady AT gmail.com" \
+      net.keyax.os="ubuntu core" \
+      net.keyax.os.ver="14.04 trusty" \
+      net.keyax.vendor="Keyax"
 
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
 
