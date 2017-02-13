@@ -7,6 +7,10 @@ LABEL net.keyax.vendor "Keyax"
 
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
 
+# Interactive prompts don't play nice with automated build systems. Better to
+# fail and log the required configuration, so it can be added to the Dockerfile.
+RUN echo 'set debconf/frontend noninteractive' | debconf-communicate debconf
+
 # a few minor docker-specific tweaks
 # see https://github.com/docker/docker/blob/9a9fc01af8fb5d98b8eec0740716226fadb3735c/contrib/mkimage/debootstrap
 RUN set -xe \
@@ -42,7 +46,8 @@ RUN sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 # See: https://github.com/systemd/systemd/blob/aa0c34279ee40bce2f9681b496922dedbadfca19/src/basic/virt.c#L434
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
+    software-properties-common \
 		ca-certificates \
 		curl \
 		dirmngr \
@@ -50,7 +55,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python \
 		wget \
 		xz-utils \
-  	&& rm -rf /var/lib/apt/lists/*
+		&& apt-get clean \
+  	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
 CMD ["/bin/bash"]
