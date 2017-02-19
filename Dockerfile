@@ -1,9 +1,9 @@
 FROM scratch
 
 LABEL maintainer="yones.lebady AT gmail.com" \
-      net.keyax.os="ubuntu core" \
-      net.keyax.os.ver="14.04 trusty" \
-      net.keyax.vendor="Keyax"
+      keyax.os="ubuntu core" \
+      keyax.os.ver="14.04 trusty" \
+      keyax.vendor="Keyax"
 
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
 
@@ -50,7 +50,7 @@ RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
 #    software-properties-common \
 # for building Couchbase Nodejs driver from source : manke gcc ...
     build-essential \
-# openssl 
+# openssl
 		ca-certificates \
 # download binaries for Nodejs
 		curl \
