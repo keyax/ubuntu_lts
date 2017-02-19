@@ -58,7 +58,6 @@ RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
 # tar.xz compression libraries for Nodejs install
 		xz-utils \
 		&& apt-get autoremove && apt-get clean \
-  	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # delete all the apt list files since they're big and get stale quickly
   	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # this forces "apt-get update" in dependent images, which is also good
