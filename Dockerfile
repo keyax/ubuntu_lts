@@ -44,7 +44,8 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
 RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
 # for building Couchbase Nodejs driver from source : manke gcc ...
-    build-essential \
+    build-essential
+RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
 # openssl
 		ca-certificates \
 # download binaries for Nodejs
