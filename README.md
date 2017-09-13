@@ -1,6 +1,6 @@
 # ubuntu-core image for docker minimal os release
 
-Keyax built of linux Ubuntu Core 14.04 LTS container for compatibility with Couchbase 4.5.0
+Keyax built of linux Ubuntu Core 14.04.5 LTS container for compatibility with Couchbase 4.5.0
 
 This Linux base image is built from scratch on Canonical binaries based on Ubuntu Core release 14.04 LTS code named trusty for compatibility with Couchbase release 4.5.0 and is specially configured to run on Docker containers and it provides the basic tools to build other dependent images like Nodejs and Mongodb to construct scalable Swarm clusters.
 

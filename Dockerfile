@@ -2,7 +2,7 @@ FROM scratch
 
 LABEL maintainer="yones.lebady AT gmail.com" \
       keyax.os="ubuntu core" \
-      keyax.os.ver="14.04 trusty" \
+      keyax.os.ver="14.04.5 trusty" \
       keyax.vendor="Keyax"
 
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
