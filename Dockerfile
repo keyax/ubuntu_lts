@@ -47,13 +47,19 @@ RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
 		ca-certificates \
 # download binaries for Nodejs
 		curl \
+# download binaries for Couchbase
+		wget \
+# openssl
+  	ca-certificates \
+    openssh-server \
 # certificates manager x.509  CRL OCSP GnuPG
 		dirmngr \
 		nano \
     python \
-    openssh-server \
-# download binaries for Couchbase
-		wget \
+# shell json parser
+    jq \
+#   nfs-common \
+#   nfs-kernel-server \
 # tar.xz compression libraries for Nodejs install
 		xz-utils \
 		&& apt-get autoremove && apt-get clean \
