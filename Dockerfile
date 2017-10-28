@@ -43,8 +43,6 @@ RUN sed -i 's/^#\s*\(deb.*universe\)$/\1/g' /etc/apt/sources.list
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
 RUN apt-get update && apt-get install --assume-yes --no-install-recommends \
-# openssl
-		ca-certificates \
 # download binaries for Nodejs
 		curl \
 # download binaries for Couchbase
